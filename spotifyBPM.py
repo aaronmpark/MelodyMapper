@@ -3,19 +3,13 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from flask import Flask, request, url_for, session, redirect, render_template
 import requests
-
-
-
-spotifyClientID = '6ed94440b43b4b369d3194454d3216df'
-spotifyClientSecret = '5b91f861ade14088a742c6a91d8fe8df'
-
+from config import spotifyClientID, spotifyClientSecret, secret_key
 
 app = Flask(__name__, static_folder='static')
 
 app.config['SESSION_COOKIE_NAME'] = 'Spotify Cookie'
-app.secret_key = 'sfjsdnfdgn23tk2ngewg2ege3h#3532gf'
 TOKEN_INFO = 'token_info'
-
+app.secret_key = secret_key
 
 # gets the token for spotify API to be used properly... refreshes so that it can be permanently used.
 def get_token():
