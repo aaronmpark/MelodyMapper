@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selections</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    
+    </head>
+<body>
+    <form action="/selections" method="POST" align="center">
+
+        <label for="playlistOLD">Current Playlist Name:</label>
+        <input type="text" id="playlistOLD" name="playlistOLD">
+        <br><br>
+        
+        <label for="playlistNEW">New Playlist Name:</label>
+        <input type="text" id="playlistNEW" name="playlistNEW">
+        <br><br>
+
+        <label for="tempo">BPM:</label>
+        <input type="text" id="tempo" name="tempo">
+        <br><br>
+        
+        <p>Lower or Higher?</p>
+        <input type="radio" id="lower" name="lowerHigher" value="lower">
+        <label for="lower">Lower</label><br>
+        <input type="radio" id="higher" name="lowerHigher" value="higher">
+        <label for="higher">Higher</label><br>
+        <br><br>
+
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+
+</html>
